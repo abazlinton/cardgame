@@ -9,23 +9,22 @@ public class Deck {
 
   public Deck() {
     this.cards = new ArrayList<Card>();
-    make();
+    this.make();
   }
 
   public int size() {
     return cards.size();
   }
 
+  public Card getCardAt(int index) {
+    return cards.get(index);
+  }
+
   public Card pick(){
-    int position = randomNumber(0, (size() - 1));
+    int position = RandomNumber.get(0, (size() - 1));
     return cards.remove(position);
   }
 
-  private int randomNumber(int min, int max){
-    Random rand = new Random();
-    int result = rand.nextInt((max - min) + 1) + min;
-    return result;
-  }
 
   private void make() {
     for (Suit suit : Suit.values()) {
