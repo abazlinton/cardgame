@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
+import game.*;
 
 
 public class DeckTest {

@@ -1,3 +1,6 @@
+package game;
+import game.*;
+
 public class Card {
 
   private Suit suit;
