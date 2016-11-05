@@ -13,7 +13,6 @@ public class DeckTest {
   @Before
   public void before() {
     deck = new Deck();
-    
   }
 
   @Test
@@ -26,7 +25,13 @@ public class DeckTest {
     Card compareCard = new Card( Suit.DIAMONDS, Rank.TWO );
     assertEquals( compareCard.getSuit(), deck.getCardAt(13).getSuit() );
     assertEquals( compareCard.getRank(), deck.getCardAt(13).getRank() );
-
   }
+
+  @Test 
+  public void pickReturnsACard() {
+    assertEquals( Card.class, deck.pick().getClass() );
+  }
+
+  
 
 }

@@ -22,4 +22,16 @@ public class CardTest {
     assertEquals( Rank.KING, card.getRank() );
   }
 
+  @Test 
+  public void testComparisons(){
+    Card two = new Card(Suit.HEARTS, Rank.TWO);
+    Card twoAgain = new Card(Suit.HEARTS, Rank.TWO);
+    Card three = new Card(Suit.HEARTS, Rank.THREE);
+    assertEquals( -1, two.compareTo( three ));
+    assertEquals( 0, two.compareTo( twoAgain ));
+    assertEquals( 1, three.compareTo( two ));
+
+
+  }
+
   }
