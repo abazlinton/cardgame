@@ -3,7 +3,7 @@ import java.util.*;
 import game.*;
 
 
-public class PontoonHand {
+public class PontoonHand implements Hand {
 
   private int[] totals;
 
@@ -37,7 +37,9 @@ public class PontoonHand {
       else aceCount++;
     }
 
-    if ( aceCount == 0 ) { return totals; }
+    if ( aceCount == 0 ) { 
+      return totals; 
+    }
     
     totals[1] = totals[0];
     totals[0] += aceCount;

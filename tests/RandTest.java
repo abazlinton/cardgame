@@ -8,9 +8,7 @@ public class RandTest {
 
   @Before 
   public void before(){
-
-   
-
+    
   }
 
   @Test
