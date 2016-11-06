@@ -4,9 +4,9 @@ import game.*;
 import java.util.*;
 
 
-public class HandTest {
+public class PontoonHandTest {
 
-  Hand handAA, handKK, handTT, handT2;
+  PontoonHand handAA, handKK, handTT, handT2;
   Card ace, king, ten, two;
 
   @Before
@@ -15,25 +15,25 @@ public class HandTest {
     ArrayList<Card> cardsAA = new ArrayList<Card>();
     cardsAA.add(ace);
     cardsAA.add(ace);
-    handAA = new Hand( cardsAA );
+    handAA = new PontoonHand( cardsAA );
     
     king = new Card( Suit.HEARTS, Rank.KING );
     ArrayList<Card> cardsKK = new ArrayList<Card>();
     cardsKK.add(king);
     cardsKK.add(king);
-    handKK = new Hand( cardsKK );
+    handKK = new PontoonHand( cardsKK );
 
     ten = new Card( Suit.HEARTS, Rank.TEN );
     ArrayList<Card> cardsTT = new ArrayList<Card>();
     cardsTT.add(ten);
     cardsTT.add(ten);
-    handTT = new Hand( cardsTT );
+    handTT = new PontoonHand( cardsTT );
   
     two = new Card( Suit.HEARTS, Rank.TWO );
     ArrayList<Card> cardsT2 = new ArrayList<Card>();
     cardsT2.add(ten);
     cardsT2.add(two);
-    handT2 = new Hand( cardsT2 );
+    handT2 = new PontoonHand( cardsT2 );
 
   } 
 

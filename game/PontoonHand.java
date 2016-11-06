@@ -3,13 +3,13 @@ import java.util.*;
 import game.*;
 
 
-public class Hand {
+public class PontoonHand {
 
   private int[] totals;
 
   private ArrayList<Card> cards;
 
-  public Hand( ArrayList<Card> cards ){
+  public PontoonHand( ArrayList<Card> cards ){
     this.cards = cards;
   }
 
