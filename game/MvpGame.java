@@ -40,10 +40,13 @@ public class MvpGame{
     }
 
     if ( playerScore > dealerScore ){
-      System.out.println("Player Wins!" + playerScore + " VS " + dealerScore);
+      System.out.println("You Win! " + playerScore + " VS " + dealerScore);
+    } else if ( playerScore == dealerScore ) {
+      System.out.println("Tied " + playerScore + " VS " + dealerScore);
     } else {
-      System.out.println("Player Loses!" + playerScore + " VS " + dealerScore);
+      System.out.println("You Lose! " + playerScore + " VS " + dealerScore);
     }
+    
 
   
 
