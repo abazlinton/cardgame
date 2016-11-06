@@ -6,11 +6,13 @@ import java.util.*;
 
 public class PontoonHandTest {
 
-  PontoonHand handAA, handKK, handTT, handT2;
+  PontoonHand handAA, handKK, handTT, handT2, handA2, handAA2;
   Card ace, king, ten, two;
+
 
   @Before
   public void before(){
+
     ace = new Card( Suit.HEARTS, Rank.ACE );
     ArrayList<Card> cardsAA = new ArrayList<Card>();
     cardsAA.add(ace);
@@ -34,6 +36,17 @@ public class PontoonHandTest {
     cardsT2.add(ten);
     cardsT2.add(two);
     handT2 = new PontoonHand( cardsT2 );
+
+    ArrayList<Card> cardsA2 = new ArrayList<Card>();
+    cardsA2.add(ace);
+    cardsA2.add(two);
+    handA2 = new PontoonHand( cardsA2 );
+
+    ArrayList<Card> cardsAA2 = new ArrayList<Card>();
+    cardsAA2.add(ace);
+    cardsAA2.add(ace);
+    cardsAA2.add(two);
+    handAA2 = new PontoonHand( cardsAA2 );
 
   } 
 
@@ -60,6 +73,20 @@ public class PontoonHandTest {
   public void testT2(){
     int [] totals = handT2.getTotals();
     assertEquals( 12, totals[0] );
+  }
+
+  @Test
+  public void testA2(){
+    int [] totals = handA2.getTotals();
+    assertEquals( 3, totals[0] );
+    assertEquals( 13, totals[1] );
+  }
+
+  @Test
+  public void testAA2(){
+    int [] totals = handAA2.getTotals();
+    assertEquals( 4, totals[0] );
+    assertEquals( 14, totals[1] );
   }
 
 
