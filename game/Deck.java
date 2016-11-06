@@ -25,7 +25,6 @@ public class Deck {
     return cards.remove(position);
   }
 
-
   private void make() {
     for (Suit suit : Suit.values()) {
       for (Rank rank : Rank.values()) {

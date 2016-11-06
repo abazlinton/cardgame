@@ -22,20 +22,8 @@ public class PontoonHand {
   }
 
   public int [] getTotals() {
-
-    int aceCount = 0;
-    for ( Card card : this.cards ) {
-      if ( card.getRank() == Rank.ACE ){
-        aceCount++;
-      }
-    }
-
-    if ( aceCount == 0 ){
-      totals = new int[1];
-    }
-    else {
-      totals = new int[2];
-    }
+ 
+    totals = new int[2];
 
     for ( Card card : this.cards ) {
       if ( card.getRank() != Rank.ACE ) {
@@ -44,12 +32,19 @@ public class PontoonHand {
           cardValue = 10;
         }
         totals[0] += cardValue;
+        totals[1] += cardValue;
       }
     }
 
-    if ( aceCount == 0 ) {return totals;}
+    int aceCount = 0;
+    for ( Card card : this.cards ) {
+      if ( card.getRank() == Rank.ACE ){
+        aceCount++;
+      }
+    }
+
+    if ( aceCount == 0 ) { return totals; }
     
-    totals[1] = totals[0];
     totals[0] += aceCount;
     totals[1] += (aceCount - 1) + 11;
     return totals;
