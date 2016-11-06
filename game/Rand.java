@@ -2,7 +2,7 @@ package game;
 import java.util.*;
 import game.*;
 
-public class RandomNumber {
+public class Rand {
 
   public static int get(int min, int max){
     Random rand = new Random();

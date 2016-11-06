@@ -21,7 +21,7 @@ public class Deck {
   }
 
   public Card pick(){
-    int position = RandomNumber.get(0, (size() - 1));
+    int position = Rand.get(0, (size() - 1));
     return cards.remove(position);
   }
 

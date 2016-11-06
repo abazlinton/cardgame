@@ -30,8 +30,6 @@ public class CardTest {
     assertEquals( -1, two.compareTo( three ));
     assertEquals( 0, two.compareTo( twoAgain ));
     assertEquals( 1, three.compareTo( two ));
-
-
   }
 
   }

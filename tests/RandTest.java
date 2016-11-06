@@ -1,9 +1,9 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import game.*;
+import java.util.*;
 
-
-public class RandomNumberTest {
+public class RandTest {
 
 
   @Before 
@@ -16,7 +16,7 @@ public class RandomNumberTest {
   @Test
   public void testSomething(){
     
-    int one = RandomNumber.get(1,1);
+    int one = Rand.get(1,1);
     assertEquals(1, one);
     
   }
