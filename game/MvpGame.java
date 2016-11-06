@@ -29,22 +29,24 @@ public class MvpGame{
     Player dealer = new Player("Dealer", dealerHand);
 
 
-    int playerScore = playerHand.getTotals()[0];
-    int dealerScore = dealerHand.getTotals()[0];
+    int playerScore1 = player.getHand().getTotals()[0];
+    int playerScore2 = player.getHand().getTotals()[1];
+    int dealerScore1 = dealer.getHand().getTotals()[0];
+    int dealerScore2 = dealer.getHand().getTotals()[1];
 
-    if ( playerHand.getTotals()[1] > playerScore ){
-      playerScore = playerHand.getTotals()[1];
+    if ( playerScore2 > playerScore1 ){
+      playerScore1 = playerScore2;
     }
-    if ( dealerHand.getTotals()[1] > dealerScore ){
-      dealerScore = dealerHand.getTotals()[1];
+    if ( dealerScore2 > dealerScore1 ){
+      dealerScore1 = dealerScore2;
     }
 
-    if ( playerScore > dealerScore ){
-      System.out.println("You Win! " + playerScore + " VS " + dealerScore);
-    } else if ( playerScore == dealerScore ) {
-      System.out.println("Tied " + playerScore + " VS " + dealerScore);
+    if ( playerScore1 > dealerScore1 ){
+      System.out.println("You Win! " + playerScore1 + " VS " + dealerScore1);
+    } else if ( playerScore1 == dealerScore1 ) {
+      System.out.println("Tied " + playerScore1 + " VS " + dealerScore1);
     } else {
-      System.out.println("You Lose! " + playerScore + " VS " + dealerScore);
+      System.out.println("You Lose! " + playerScore1 + " VS " + dealerScore1);
     }
     
 
